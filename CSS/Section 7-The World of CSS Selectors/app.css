@@ -1,0 +1,50 @@
+/* Universal Selector 
+*{
+    background-color: cyan;
+} */
+
+/* Element Selector */
+button{
+    font-size: 30px;
+    background-color:#a8dadc ;
+}
+body{
+    background-color: #f1faee;
+}
+span{
+    color:#457b9d;
+}
+/* Use comma to combine multiple selectors*/
+h1,h2{
+    color:#1d3557;
+} 
+/* The Id Selector */
+#signup{
+    background-color: #1d3557;
+    color: #f1faee;
+}
+/* Class Selector */
+.tag{
+    background-color:#e63926 ;
+    color: #f1faee;
+    font-size: 16px;
+}
+/* Descendant Selector */
+.post a{
+    color:#457b9d;
+}
+footer a{
+    color:#e63946;
+}
+/* Adjacent Selector(+)*/
+input+button{
+    background-color: pink;
+}
+
+h2+button{
+    font-size: 20 px
+    /* background-color:magenta */
+}
+/* Direct Child */
+footer>
+
