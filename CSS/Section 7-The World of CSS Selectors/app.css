@@ -14,37 +14,117 @@ body{
 span{
     color:#457b9d;
 }
+
 /* Use comma to combine multiple selectors*/
 h1,h2{
     color:#1d3557;
 } 
+
 /* The Id Selector */
 #signup{
     background-color: #1d3557;
     color: #f1faee;
 }
+
 /* Class Selector */
 .tag{
     background-color:#e63926 ;
     color: #f1faee;
     font-size: 16px;
 }
+
 /* Descendant Selector */
 .post a{
     color:#457b9d;
+    font-weight: bold;
+    text-decoration: none;
 }
 footer a{
     color:#e63946;
 }
+
 /* Adjacent Selector(+)*/
 input+button{
     background-color: pink;
 }
-
 h2+button{
     font-size: 20 px
     /* background-color:magenta */
 }
+
 /* Direct Child */
-footer>
+footer>a{
+    color: #457b9d;
+}
+
+/* Attribute Selector */
+input[type="password"] {
+    color:greenyellow;
+}
+
+/* section[class="post"]{
+    background-color: purple;
+} */
+a[href*="google"]{
+    color: magenta;
+}
+
+/* pseudo-class */
+/* .post button:hover{
+    background-color: #e63946;
+    color: #f1faee;
+} */
+
+.post a:hover{
+    text-decoration: underline;
+}
+
+.post button:active{
+    background-color: #02c391;
+}
+.post:nth-of-type(2n){
+    background-color: #dfe8dc;
+}
+
+/* pseudo-elements */
+h2::first-letter{
+    font-size:50px;
+}
+p::first-line{
+    color:purple;
+}
+p::selection{
+    background-color:yellow;
+}
+
+/* The Cascade Concept*/
+/* h1,h2{
+    color:yellow
+} */
+/* The browser runs all of the h2 stylings top down and if there is a conflict it will select the last entered style */
+
+/* Specificity Concept */
+/* Specificity is how the browser decides which rules to apply when multiple rules could apply to t he same element. it is a measure of how specific a given selector is. the more specific selector wins */
+.post button:hover{
+    background-color: #e63946;
+    color: #f1faee;
+}
+/* above is more specic so browser yields to the one above since its specified under class */
+/* Most to least specific
+if>class>element */
+button:hover{
+    background: olive;
+}
+
+/* The !important Exception "Overides everything"*/
+button {
+    background-color: magenta !important;
+}
+
+
+
+
+
+
+
 
